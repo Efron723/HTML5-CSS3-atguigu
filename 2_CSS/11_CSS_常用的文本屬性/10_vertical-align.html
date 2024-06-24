@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>10_vertical-align</title>
+    <style>
+        /* 
+        vertical-align 只能控制行內元素及行內塊元素
+        不能控制塊元素
+        單元格也可以控制
+         */
+        div {
+            font-size: 50px;
+            height: 300px;
+            background-color: skyblue;
+        }
+        /* 
+        vertical-align 包含 top、bottom、baseline、middle
+        top、bottom 分別代表上中下
+        baseline 代表對齊小寫x的基線
+        middle 代表行內元素或行內塊元素的height中間(並不是小寫x的中間)
+               與父元素的小寫x的中間對齊 
+         */
+        span {
+            font-size: 10px;
+            background-color: orange;
+            vertical-align: middle;
+        }
+        /* 
+        圖片比文字大 如果調整vertical-align 是元素裡最高的去決定
+        最高的是圖片 所以調整vertical-align是文字會動    
+         */
+        img {
+            width: 150px;
+            vertical-align: middle;
+        }
+        .si {
+            vertical-align: top;    /* vertical-align也可以控制單元格 html是valign css是vertical-align */
+        }
+    </style>
+</head>
+<body>
+    <div>
+        atguigu尚硅谷x<span>x前端</span>
+    </div>
+    <hr>
+    <div>
+        atguigu尚硅谷x<img src="/1_HTML/resource/406186259e1e1618333002.jpg">
+    </div>
+    <table border="10" cellspacing="2">
+        <caption>人員信息</caption>
+        <thead>
+            <tr>
+                <th>姓名</th>
+                <th>年齡</th>
+                <th>性別</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr height="100px">
+                <td valign="bottom">張三</td> <!-- html的控制文字在單元格的屬性 -->
+                <td>10</td>
+                <td>男</td>
+            </tr>
+            <tr height="200px">
+                <td class="si">李四</td>
+                <td>15</td>
+                <td>女</td>
+            </tr>
+            <tr>
+                <td>王五</td>
+                <td>20</td>
+                <td>男</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

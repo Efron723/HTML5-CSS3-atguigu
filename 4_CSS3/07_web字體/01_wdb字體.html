@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>01_wdb字體</title>
+    <style>
+        /* 用戶不用安裝即可使用這字體 使用下面這段語法 */
+        /* 簡寫方式 */
+        @font-face {
+            /* font-family 取你要使用的名稱 */
+            font-family: 情書字體;
+            src: url(./font1/方正手迹.ttf);
+        }
+        /* 高兼容性寫法 */
+        @font-face {
+            font-family: "atguigu";
+            font-display: swap;
+            src: url('./font2/webfont.eot'); /* IE9 */
+            src: url('./font2/webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+            url('./font2/webfont.woff2') format('woff2'),
+            url('./font2/webfont.woff') format('woff'), /* chrome、firefox */
+            url('./font2/webfont.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+            url('./font2/webfont.svg#webfont') format('svg'); /* iOS 4.1- */
+        }
+        /* font-family使用上面你取名的名稱 */
+        .t1 {
+            font-size: 100px;
+            font-family: '情書字體';
+        }
+        .t2 {
+            font-size: 100px;
+            font-family: 'atguigu';
+        }
+    </style>
+</head>
+<body>
+    <h1 class="t1">春風得意馬蹄疾，不信人間有別離</h1>
+    <h1 class="t2">春風得意馬蹄疾，不信人間有別離</h1>
+</body>
+</html>

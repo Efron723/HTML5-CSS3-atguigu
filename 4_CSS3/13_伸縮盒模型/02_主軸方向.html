@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>02_主軸方向</title>
+    <style>
+        .outer {
+            width: 1000px;
+            height: 600px;
+            background-color: #888;
+            margin: 0 auto;
+            display: flex;
+
+            /* 調整主軸方向:水平從左到右 默認 */
+            flex-direction: row;
+
+            /* 調整主軸方向:水平從右到左 */
+            flex-direction: row-reverse;
+
+            /* 調整主軸方向:垂直從上到下 */
+            flex-direction: column;
+
+            /* 調整主軸方向:垂直從下到上 */
+            flex-direction: column-reverse;
+        }
+        .inner {
+            width: 200px;
+            height: 200px;
+            border: 1px solid black;
+            background-color: skyblue;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <div class="inner inner1">1</div>
+        <div class="inner inner2">2</div>
+        <div class="inner inner3">3</div>
+    </div>
+</body>
+</html>

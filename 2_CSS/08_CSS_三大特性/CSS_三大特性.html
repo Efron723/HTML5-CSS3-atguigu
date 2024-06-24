@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS_三大特性</title>
+    <style>
+        h2 {
+            color: red;
+        }
+
+        /* (優先繼承離的近的)繼承離span最近的 後來者居上不適用 所以span裡面是黃色 */
+        /* span {        
+            color: yellow;
+        } */
+
+        div {
+            color: green;
+        }
+
+        /* 通配選擇器是灰色(最弱的) 但span是div的兒子 繼承的樣式(最最弱的) 所以span裡面變成灰色 */
+        * {   /* !important > 行內樣式 > ID選擇器 > 類選擇器 > 元素選擇器 > 通配選擇器(*) > 繼承的樣式 */
+            color: gray;
+        }
+
+        /* 以下並集選擇器的每一個是分開計算的 */
+        div,span,p {
+            color: red;
+        }
+        /* 
+        等於下面這種形式  所以每一個都是 ( 0 , 0 , 1 , )
+        div {}
+        span {}
+        p {} 
+         */
+    </style>
+</head>
+<body>
+    <h2>尚硅谷</h2>
+    <hr>
+    <div>
+        我是div中的文字
+        <span>我是span中的文字</span>
+    </div>
+</body>
+</html>

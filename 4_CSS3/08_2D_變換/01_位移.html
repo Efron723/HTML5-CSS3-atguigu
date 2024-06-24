@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>01_位移</title>
+    <style>
+        /* 瀏覽器對位移有優化 與定位相比 處理位移的效率更高 如果定位能做位移也能做  首選位移 */
+
+        /* 位移對行內元素無效 display:block / inline-block 可解決 */
+
+        /* 配合定位可實現水平垂直居中 */
+        
+        .outer {
+            width: 200px;
+            height: 200px;
+            border: 2px solid black;
+            margin: 0 auto;
+            margin-top: 100px;
+            position: relative;
+        }
+        .inner {
+            width: 200px;
+            height: 200px;
+            background-color: deepskyblue;
+
+            /* transform百分比移動的是自身 */
+            /* transform: translateX(50%); */
+
+            /* 水平位移 */
+            /* transform: translateX(50px); */
+
+            /* 垂直位移 */
+            /* transform: translatey(50px); */
+
+            /* 水平+垂直位移 */
+            /* transform: translate(50px,50px); */
+        }
+
+        /* 利用位移水平垂直居中小技巧 */
+        .inner2 {
+            width: 60px;
+            height: 60px;
+            background-color: deepskyblue;
+            position: absolute; /* 給一個絕對定位 */
+            top: 50%;   /* 父元素的百分之50 */
+            left: 50%;
+            transform: translate(-50%,-50%);  /* 自身的百分之50 */
+        }
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <div class="inner"></div>
+    </div>
+
+    <div class="outer">
+        <div class="inner2"></div>
+    </div>
+</body>
+</html>

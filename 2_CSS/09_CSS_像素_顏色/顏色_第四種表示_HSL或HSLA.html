@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>顏色_第四種表示_HSL或HSLA</title>
+    <style>
+        html {
+            background-color: rgba(0, 0, 0);
+        }
+
+        /* hsl(hue, saturation, lightness) 
+           hsl(色相 0deg~360deg 360=0, 
+           飽和度0~100% 往顏色裡面加灰色 0%就是純灰色 100%顏色本身的顏色, 
+           亮度 0%~100% 0%黑色 50%顏色本身顏色 100%白色) 
+           也可以調整透明度  可以是百分比也可以是小數點
+        */
+        .atguigu1 {
+             color: hsl(0deg, 100%, 50%);
+        }
+        .atguigu2 {
+            color: hsl(60deg, 100%, 50%);
+        }
+        .atguigu3 {
+            color: hsl(120deg, 100%, 50%);
+        }
+        .atguigu4 {
+            color: hsl(180deg, 100%, 50%); 
+        }
+        .atguigu5 {
+            color: hsl(240deg, 100%, 50%); 
+        }
+        .atguigu6 {
+            color: hsl(300deg, 100%, 50%); 
+        }
+        .atguigu7 {
+            color: hsl(360deg, 100%, 50%); 
+        }
+        .atguigu8 {
+            color: hsla(0deg, 100%, 50%, 0.3); 
+        }
+    </style>
+</head>
+<body>
+    <h2 class="atguigu1">尚硅谷1</h2>
+    <h2 class="atguigu2">尚硅谷2</h2>
+    <h2 class="atguigu3">尚硅谷3</h2>
+    <h2 class="atguigu4">尚硅谷4</h2>
+    <h2 class="atguigu5">尚硅谷5</h2>
+    <h2 class="atguigu6">尚硅谷6</h2>
+    <h2 class="atguigu7">尚硅谷7</h2>
+    <h2 class="atguigu8">尚硅谷8</h2>
+</body>
+</html>

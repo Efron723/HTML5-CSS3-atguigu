@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>01_線性漸變</title>
+    <style>
+        .box {
+            width: 250px;
+            height: 200px;
+            border: 1px solid black;
+            float: left;
+            margin-right: 50px;
+        }
+
+        /* 線性漸變 linear-gradient 可以無限增加顏色 */
+        .box1 {
+            background-image: linear-gradient(red, yellow, green );
+        }
+        /* 
+           to right 第一個顏色從左往右
+           to left  第一個顏色從右往左 
+           to right top 第一個顏色從左下往右上
+           to left bottom 第一個顏色從右上到左下  以此類推
+        */
+        .box2 {
+            background-image: linear-gradient(to left bottom, red, yellow, green);
+        }
+        /* 0deg (0degreed) 第一個顏色在最下面 順時針旋轉 */
+        .box3 {
+            background-image: linear-gradient(0deg, red, yellow, green);
+        }
+        /* 顏色後面加像素值 最上方是0px 最底部是你自己設定的高度值 這邊是200px 
+           到你設定值之前是顏色的純色 */
+        .box4 {
+            background-image: linear-gradient(red 50px, yellow 100px, green 150px);
+        }
+        /* 讓顏色呈現彩色的方式 */
+        .box5 {
+            background-image: linear-gradient(50deg, red, yellow, green);
+            font-size: 80px;
+            text-align: center;
+            line-height: 200px;
+            font-weight: bold;
+            color: transparent;
+            -webkit-background-clip: text;
+        }
+    </style>
+</head>
+<body>
+    <div class="box box1">默認情況(從上到下)</div>
+    <div class="box box2">通過關鍵詞調整線性漸變的方向</div>
+    <div class="box box3">通過角度調整線性漸變的方向</div>
+    <div class="box box4">調整線性漸變的區域</div>
+    <div class="box box5">你好啊</div>
+</body>
+</html>

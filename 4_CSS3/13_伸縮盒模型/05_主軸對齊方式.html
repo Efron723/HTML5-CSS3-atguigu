@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>05_主軸對齊方式</title>
+    <style>
+        .outer {
+            width: 1000px;
+            height: 600px;
+            background-color: #888;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+
+            /* 一行中必須要有空位 對齊方式才有用 */
+
+            /* 主軸的對齊方式: 主軸的起始位置 */
+            justify-content: flex-start;
+
+            /* 主軸的對齊方式: 主軸的結束位置 */
+            justify-content: flex-end;
+
+            /* 主軸的對齊方式: 中間對齊 */
+            justify-content: center;
+
+            /* 主軸的對齊方式: 項目均勻分布在一行中 項目與項目之間的距離是項目距離border的二倍 */
+            justify-content: space-around;
+
+            /* 主軸的對齊方式: 項目均勻分布在一行中 項目與項目之間的距離是相等的 項目距離邊緣沒有距離 */
+            justify-content: space-between;   /* 這個用最多! */
+
+            /* 主軸的對齊方式: 項目均勻分布在一行中 */
+            justify-content: space-evenly;
+        }
+        .inner {
+            width: 200px;
+            height: 200px;
+            border: 1px solid black;
+            background-color: skyblue;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <div class="inner inner1">1</div>
+        <div class="inner inner2">2</div>
+        <div class="inner inner3">3</div>
+    </div>
+</body>
+</html>

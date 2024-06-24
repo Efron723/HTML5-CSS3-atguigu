@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>25_行內塊的幽靈空白問題</title>
+    <style>
+        div {
+            width: 600px;
+            background-color: skyblue;
+            /* font-size: 0; */
+        }
+        /* 
+        幽靈空白是因為圖片與小寫x基線對齊導致 
+        最好的方法是用vertical-align:bottom 或 top middle 不為baseline即可
+        其次是display:block 或是 在父元素上加上font-size: 0 但前提是沒有文字的情況
+        */
+        img {
+            vertical-align: bottom;
+            /* display: block; */
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <img src="../images/悟空.jpg" alt="悟空">
+    </div>
+</body>
+</html>

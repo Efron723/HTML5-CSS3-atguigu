@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>02_縮放</title>
+    <style>
+        .outer {
+            width: 200px;
+            height: 200px;
+            border: 2px solid black;
+            margin: 0 auto;
+            margin-top: 100px;
+        }
+        .inner {
+            width: 200px;
+            height: 200px;
+            background-color: deepskyblue;
+
+            /* scale 縮放能寫負值 畫面會鏡向反轉 幾乎不用 */
+            transform: scaleX(-1);
+
+            /* 縮放自身0.5倍 */
+            /* 如果不寫X/Y 那就是兩個方向都進行縮放 */
+            transform: scale(0.5);
+        }
+
+        /* 縮放文字小技巧 瀏覽器默認最小12px 利用縮放可以讓文字更小 */
+        span {
+            display: inline-block;
+            transform: scale(0.5);
+        }
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <div class="inner">你好啊</div>
+    </div>
+    <span>好</span>
+</body>
+</html>

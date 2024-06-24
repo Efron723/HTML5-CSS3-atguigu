@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>01_相對定位</title>
+    <style>
+        /* 
+        絕對定位 是定位於他的包含塊 
+        1.只要開啟定位的父元素 就是他的包含塊
+        2.如沒開啟定位 將會一層一層往上找 最終找到HTML
+        所以絕大部分會在父元素開啟相對定位
+        然後再開啟絕對定位
+
+        絕對定位也能寫負值
+        left right 同時使用 left 生效
+        top bottom 同時使用 top 生效
+        絕對定位和浮動不能共存
+        定位可以和margin一起使用  但是特別不推薦!!!
+        有開啟left才能用margin-left 以此類推 但是特別不推薦!!!
+
+        只要開啟定位  就是變成定位元素
+        1.寬高是內容撐開的
+        2.可以設置寬高
+        舉例來說 給一個SPAN元素 可以設置寬高
+        */
+        .outer {
+            width: 500px;
+            background-color: skyblue;
+            border: 1px solid black;
+            padding: 20px;
+            position: relative;
+        }
+        .box {
+            width: 200px;
+            height: 200px;
+            font-size: 20px;
+        }
+        .box1 {
+            background-color: #888;
+        }
+        .box2 {
+            background-color: orange;
+            position: absolute;
+            top: 220px;
+            left: 20px;
+        }
+        .box3 {
+            background-color: green;
+        }
+        .outer:hover .box2 {
+            left: 220px;
+        }
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <div class="box box1">1</div>
+        <div class="box box2">2</div>
+        <div class="box box3">3</div>
+    </div>
+</body>
+</html>

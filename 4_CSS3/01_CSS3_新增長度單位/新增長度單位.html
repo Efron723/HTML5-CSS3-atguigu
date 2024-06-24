@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>新增長度單位</title>
+    <style>
+
+        /*
+         CSS3 新增長度單位
+         rem  根元素之長度
+         vw
+         vh
+         vmax
+         vmin
+        */
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .box1 {
+            width: 200px;
+            height: 200px;
+            background-color: skyblue;
+        }
+
+        /* 
+        vw viewport width 視窗橫向大小 (用的較多)
+        50vw  整個視窗大小的50%
+        vh viewport high  視窗高度大小
+        20vh  整個視窗高度的20%
+        */
+
+        .box2 {
+            width: 50vw;
+            height: 20vw;
+            background-color: green;
+            margin: 10px 0;
+        }
+
+        /* 
+        vmax  會找到視窗的長度或寬度哪個較大  就選他的百分比
+        50vmax  寬度較大就是寬度的百分之50
+        vmin  會找到視窗的長度或寬度哪個較小  就選他的百分比
+        50vmin  寬度較小就是寬度的百分之50
+        */
+
+        .box3 {
+            width: 50vmax;
+            height: 20vmax;
+            background-color: orange;
+        }
+    </style>
+</head>
+<body>
+    <div class="box1">像素</div>
+    <div class="box2">vw和vh</div>
+    <div class="box3">vmax</div>
+</body>
+</html>

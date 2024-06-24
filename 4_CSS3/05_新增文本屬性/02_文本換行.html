@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>02_文本換行</title>
+    <style>
+        div {
+            width: 400px;
+            height: 400px;
+            border: 1px solid black;
+            font-size: 20px;
+
+            /* white-normal (默認值) */
+
+            /* white-space: pre */
+            white-space: pre;  /* 跟pre標籤一樣  按原文顯示 */
+            /* white-space: pre-wrap 按原文顯示 但是包裹在元素裡面自動換行 */
+            white-space: pre-wrap;
+            /* white-space: pre-line 按原文顯示 但是包裹在元素裡面且始末空格不顯示 */
+            white-space: pre-line;
+            /* white-space: nowrap 全部聚在一行 強制不換行 (使用的最多) */
+            white-space: nowrap;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <!-- 按原文顯示如果都不要空格就全部往左縮進 -->
+        山迴路轉不見君
+        雪是空轉馬留處雪是空轉馬留處雪是空轉馬留處雪是空轉馬留處雪是空轉馬留處
+        山迴路轉不見君
+        雪是空轉馬留處
+        山迴路轉不見君
+        雪是空轉馬留處
+        山迴路轉不見君
+        雪是空轉馬留處
+        山迴路轉不見君
+        雪是空轉馬留處
+        山迴路轉不見君
+        雪是空轉馬留處
+    </div>
+</body>
+</html>

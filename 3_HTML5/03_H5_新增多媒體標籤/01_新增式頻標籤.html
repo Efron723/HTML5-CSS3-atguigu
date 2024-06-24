@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>01_新增式頻標籤</title>
+    <style>
+        video {
+            width: 400px;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        video 標籤
+        controls 是控制器 
+        muted 是靜音 
+        autoplay 是自動撥放 (前提是必須是靜音的)
+        loop 循環播放
+        poster 封面 (自動撥放要先關掉 且封面要符合影片比例)
+        preload 預加載 三個預選值 auto metadata(沒開始撥放影片 但加載基本信息ex:影片時長 音量 縮放) none
+      -->
+    <video src="./小电影.mp4" controls muted loop poster="./封面.png" preload="metadata"></video>
+</body>
+</html>

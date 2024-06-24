@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>03_過渡複合屬性</title>
+    <style>
+        .outer {
+            width: 1000px;
+            height: 100px;
+            border: 1px solid black;
+        }
+        .inner {
+            width: 100px;
+            height: 100px;
+            background-color: orange;
+
+            /* 
+            複合屬性總共有4個
+            transition-duration
+            transition-property
+            transition-delay
+            transition-timing-function
+            習慣先寫 過渡時間 運動函數 屬性
+            一般是不寫delay的
+            
+            順序只需要注意時間順序就好
+            第一個時間是過渡時間
+            第二個時間是延遲時間
+            只寫一個時間就是只有過渡時間
+            */
+            transition: all 5s 0.5s linear;
+        }
+        .outer:hover .inner {
+            width: 1000px;
+        }
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <div class="inner"></div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>03_重複漸變</title>
+    <style>
+        /* 
+            重複漸變定義: 在沒有發生漸變的區域(純色區域) 重新開始漸變 就是重複漸變
+            只有純色區域才會發生重複漸變
+            從最後一個純色區域開始  從第一個顏色開始漸變下去
+        */
+        .box {
+            width: 250px;
+            height: 200px;
+            border: 1px solid black;
+            float: left;
+            margin-right: 50px;
+            margin-top: 20px;
+        }
+
+        .box1 {
+            background-image: repeating-linear-gradient(red 50px, yellow 100px, green 150px);
+        }
+
+        .box2 {
+            background-image: repeating-linear-gradient(50deg, red, yellow, green);
+            font-size: 80px;
+            text-align: center;
+            line-height: 200px;
+            font-weight: bold;
+            color: transparent;
+            -webkit-background-clip: text;
+        }
+
+        .box3 {
+            background-image: repeating-radial-gradient(red 50px, yellow 100px, green 150px);
+        }
+
+        .box4 {
+            background-image: repeating-radial-gradient(100px 50px at 125px 150px, red 50px , yellow 100px, green 150px);
+        }
+    </style>
+</head>
+<body>
+    <div class="box box1"></div>
+    <div class="box box2">你好啊</div>
+    <div class="box box3"></div>
+    <div class="box box4"></div>
+</body>
+</html>

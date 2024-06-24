@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>02_新增狀態標籤</title>
+    <style>
+        progress {
+            width: 400px;
+        }
+    </style>
+</head>
+<body>
+    <span>手機電量: </span>
+    <!-- meter 已知範圍內的測量 ex:電量 磁盤用量 -->
+    <meter max="100" min="0" value="9" low="10" high="20" optimum="90"></meter>
+    <br>
+    <span>當前進度: </span>
+    <!-- progress 某個任務完成的指示器 -->
+    <progress max="100" value="20"></progress>
+</body>
+</html>

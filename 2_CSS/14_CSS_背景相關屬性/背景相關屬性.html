@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>背景相關屬性</title>
+    <style>
+        body {
+            background-color: gray;
+        }
+        div {
+            width: 400px;
+            height: 400px;
+            border: 2px black solid;
+            font-size: 40px;
+            /* 默認值顏色是transparent透明的 */
+            background-color: skyblue;
+            /* 設置背景圖片 */
+            background-image: url(../images/悟空.jpg);
+            /* 
+            設置背影圖片的重複方式 
+            repeat no-repeat repeat-x repeat-y
+            */
+            background-repeat: no-repeat;
+            /* 
+            控制背景圖片的位置 第一種寫法:用關鍵詞
+            left center right 水平 
+            top center bottom 垂直
+            正中間寫一個center就可以
+            如果只寫一個值 另一個值的默認是center
+            */
+            background-position: center;
+            /* 控制背景圖片的位置 第二種寫法:用具體的像素值 */
+            background-position: 120px 70px;
+            /* 複合屬性 背景顏色的默認值是transparent透明 */
+            background: skyblue url(../images/悟空.jpg) no-repeat 120px 70px;
+        }
+    </style>
+</head>
+<body>
+    <div>你好啊!</div>
+</body>
+</html>

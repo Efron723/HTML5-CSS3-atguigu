@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>01_3D空間與變換</title>
+    <style>
+        /* 開起3D及景深 都是在父元素上開啟 */
+        .outer {
+            width: 200px;
+            height: 200px;
+            border: 2px solid black;
+            margin: 0 auto;
+            margin-top: 100px;
+
+            /*
+            開啟2D空間  默認值
+            tranform-style: flat;
+            */
+
+            /* 開啟3D空間 */
+            transform-style: preserve-3d;
+
+            /* 
+            開啟景深 (眼睛距離屏幕的距離)
+            (不能為0或是負數 眼睛不可能貼在屏幕上或是屏幕後面) 
+            (建議給元素本身高度多一點   邊試邊調)
+            */
+            perspective: 300px;   /* 默認值是none(不開啟景深) */
+        }
+        .inner {
+            width: 200px;
+            height: 200px;
+            background-color: deepskyblue;
+            transform: rotateX(50deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <div class="inner">你好啊</div>
+    </div>
+</body>
+</html>

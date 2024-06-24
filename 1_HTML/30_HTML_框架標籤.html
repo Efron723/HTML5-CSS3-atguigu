@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <title>框架標籤</title>
+</head>
+<body>
+    <!-- frameborder 只有2個值  0或者1 -->
+    <!-- 利用<iframe>嵌入一個普通網頁 -->
+    <!-- <iframe width="200" height="200" src="https://zh.wikipedia.org/zh-tw/Wikipedia:%E9%A6%96%E9%A1%B5"></iframe> -->
+    <!-- <br> -->
+
+    <!-- 利用<iframe>嵌入一個廣告網頁 -->
+    <!-- <iframe width="200" height="100" src="https://cas.criteo.com/delivery/afr.php?ptv=140&abp=3&zoneid=525387&cb=10551672163&nodis=1&charset=UTF-8&dc=3&atfr=1&loc=https%3A%2F%2Fwww.ettoday.net%2Fnews%2Ffocus%2F%25E9%25A6%2596%25E9%25A0%2581%2F%25E9%25A0%25AD%25E6%25A2%259D%2F&gdprApp=0&gdprVer=2&uspIab=1---" frameborder="0"></iframe> -->
+    <!-- <br> -->
+
+    <!-- 利用<iframe>嵌入一個其他內容 -->
+    <!-- <iframe src="./resource/蠟筆小新-kureyon-shin-chan.gif" frameborder="0"></iframe> -->
+
+    <!-- 與超鏈接的target屬性配合使用 -->
+    <a href="https://zh.wikipedia.org/zh-tw/Wikipedia:%E9%A6%96%E9%A1%B5" target="container">點我看百科</a>
+    <br>
+    <a href="https://udn.com/news/index" target="container">點我看新聞</a>
+    <br>
+    <!-- 與表單的target屬性配合使用 -->
+    <form action="https://so.toutiao.com/search" target="container">
+        <label>
+            <input type="text" name="keyword">
+            <input type="submit" name="搜索">
+        </label>
+    </form>
+    <!-- <button>搜索</button> -->
+
+    <iframe name="container" width="300" height="300" src="" frameborder="0"></iframe>
+</body>
+</html>

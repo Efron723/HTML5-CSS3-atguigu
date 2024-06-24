@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>04_媒體查詢_常用域值</title>
+    <!-- 響應試佈局一個個寫好後以下方式引用CSS -->
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/small.css">
+    <link rel="stylesheet" href="./css/middle.css">
+    <link rel="stylesheet" href="./css/large.css">
+    <!-- 媒體查詢也可以在link這邊寫media大於等於1200px引用此CSS樣式 -->
+    <link rel="stylesheet" media="screen and (1200px<=width)" href="./css/huge.css">
+</head>
+<body>
+    <h1>你好啊</h1>
+    <!-- .outer>.inner.inner$*3 -->
+    <div class="outer">
+        <div class="inner inner1"></div>
+        <div class="inner inner2"></div>
+        <div class="inner inner3"></div>
+    </div>
+</body>
+</html>

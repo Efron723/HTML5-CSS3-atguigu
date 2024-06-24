@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>01_新增表單控見的屬性</title>
+</head>
+<body>
+    <form action="">
+        <!-- 
+            placeholder句子中必要但無實際意義的詞項 用於文字輸入類的表單控件
+            
+            required 提交表單必須填寫此項
+            radio 只須寫在其中一行即可 提交表單時會說必須選擇其中一項
+            check 如果只填寫其中一個 提交時則是叫你必須選擇那一項
+
+            autofocus 一進頁面光標直接在那行元素 通常是在第一個加上ex:帳號 不會加在radio checkbox button之類的
+            
+            autocomplete 自動完成 自動記錄你之前輸入的值 瀏覽器裡的設置的地址要打開 可以加在正常的文本輸入上 ex:帳號 收貨地址 所在區域
+            
+            pattern 正則表達式 要配合JS 可填寫在帳號密碼其他不能 前提是必須有required必需項 且不能為空
+            所以通常pattern 與 required 一起配合使用
+         -->
+        帳號: <input 
+                type="text" 
+                name="acount" 
+                placeholder="請輸入帳號" 
+                required 
+                autofocus 
+                autocomplete="on"
+                pattern="\w{6}"
+              >
+        <br>
+        密碼: <input type="password" name="pwd" placeholder="請輸入密碼" required>
+        <br>
+        性別: 
+            <input type="radio" value="male" name="gender" required>男
+            <input type="radio" value="female" name="gender">女
+        <br>
+        愛好: 
+            <input type="checkbox" value="smoke" name="hobby">抽菸
+            <input type="checkbox" value="drink" name="hobby" required>喝酒
+            <input type="checkbox" value="perm" name="hobby">燙頭
+        <br>
+        其他: <textarea name="other" placeholder="請輸入" required></textarea>
+        <br>
+        <button>搜索</button>
+    </form>
+</body>
+</html>

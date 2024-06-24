@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>03_音頻案例</title>
+    <style>
+        audio {
+            width: 600px;
+        }
+        .mask {
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+        .dialog {
+            position: absolute;
+            width: 400px;
+            height: 400px;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+            background-color: green;
+            text-align: center;
+            line-height: 400px;
+            font-size: 40px;
+        }
+        span {
+            border: 1px solid white;
+            cursor: pointer;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <audio id="music" src="./小曲.mp3" controls></audio>
+    <div class="mask" id="mask">
+        <div class="dialog">
+            <span>點我登陸</span>
+            <span onclick="go()">隨便聽聽</span>
+        </div>
+    </div>
+
+    <script>
+        function go(){
+            music.play()
+            mask.style.display = 'none'
+        }
+    </script>
+</body>
+</html>

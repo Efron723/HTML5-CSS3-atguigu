@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>01_選擇器優先級_簡單聊</title>
+    <style>
+        /* 行內樣式  > ID選擇器  > 類選擇器 > 元素選擇器 > 通配選擇器 */
+        #atguigu {
+            color: saddlebrown;
+        }
+        
+        .slogan {
+
+            color: yellow;
+        }
+
+        h2 {
+            color: red;
+        }
+
+        * {
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <h2 class="slogan" id="atguigu">尚硅谷，讓天下沒有難學的技術!</h2>
+</body>
+</html>

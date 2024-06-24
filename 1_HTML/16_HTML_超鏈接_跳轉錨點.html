@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <title>超鏈接_跳轉錨點</title>
+</head>
+<body>
+    <a href="#mazda2">看馬三第二張</a>
+    <a href="#mazda3">看馬三第三張</a>
+
+    <p>馬三第一張</p>
+    <img width="500" src="./2.jpg" alt="馬三(1)">
+
+    <a name="mazda2"></a>
+    <p>馬三第二張</p>
+    <img width="500" src="./path_test/1.jpg" alt="馬三(2)">
+
+    <p id="mazda3">馬三第三張</p>
+    <img width="500" src="./path_test/a/3.jpg" alt="馬三(3)">
+    
+    <p>馬三第四張</p>
+    <img width="500" src="./path_test/a/b/4.jpg" alt="馬三(4)">
+
+    <!-- 
+        錨點屬性  name  id
+        id 特性是通用的  可以給任何標籤加id屬性(數字不要開頭)
+        HTML5最精準的用法  是用 id 
+        能夠精準的到達想要瀏覽的位置
+    -->
+
+    <p>照片已瀏覽完畢</p>
+    <a href="#">回到頂部</a>
+    <a href="">刷新頁面</a>
+    <a href="javascript:alert(666);">點我彈窗</a>
+
+    <!-- 加#直接回到頂部 -->
+    <!-- 甚麼都不加  是刷新頁面 -->
+    <!-- 可以跳轉到其他頁面的錨點 -->
+
+</body>
+</html>

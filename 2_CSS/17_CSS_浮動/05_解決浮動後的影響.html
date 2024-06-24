@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>05_解決浮動後的影響</title>
+    <style>
+
+        /* 布局的一個重要原則 要馬兄弟全都浮動 要馬全都不浮動 */
+
+        /* 後面的兄弟元素 會佔據浮動元素之前的位置 在浮動元素的下面 ， 對前面的兄弟無影響 */
+        .outer {
+            width: 500px;
+            background-color: gray;
+            border: 1px solid black;
+
+            /* 第一種解決方案 */
+            /* height: 122px; */
+
+            /* 第二種解決方案 */
+            /* float: left; */
+
+            /* 第三種解決方案 */
+            /* overflow: hidden; */
+
+
+        }
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: skyblue;
+            border: 1px solid black;
+            margin: 10px;
+        }
+        .box1,.box2,.box3,.box4 {
+            float: left;
+        }
+
+        /* 第四種解決方案 在下面加一個空白div 然後給他calear: both; */
+        /* .mofa {
+            clear: both;
+        } */
+
+        /* 第五種解決方案 偽元素選擇器 content: ""; display: block; clear: both; */
+        .outer::after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <div class="box box1">1</div>
+        <div class="box box2">2</div>
+        <div class="box box3">3</div>
+        <div class="box box4">4</div>
+        <!-- <div class="mofa"></div> -->
+    </div>
+</body>
+</html>

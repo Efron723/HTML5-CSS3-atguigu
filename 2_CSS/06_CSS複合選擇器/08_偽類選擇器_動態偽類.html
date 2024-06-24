@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <title>08_偽類選擇器_動態偽類</title>
+    <style>
+
+        /* lvha 順序不能變動 就按照這個順序 */
+
+        /* 選中的是沒有訪問過的a元素 */
+         a:link {
+            color: orange;
+        }
+
+        /* 選中的是訪問過的a元素 */
+        a:visited {
+            color: gray;
+        }
+
+        /* 選中的是鼠標懸浮狀態的a元素 */
+        a:hover {
+            color: skyblue;
+        }
+
+         /* 選中的是激活狀態的a元素 */
+        a:active {
+            color: green;
+        }
+
+        /* hove & active 不是超練接也可以寫這2個屬性 */
+        span:hover {
+            color: blue;
+        }
+
+        span:active {
+            color: red;
+        }
+
+        /* focus 當鼠標點擊文字框或選項時會有背景色跟選擇顏色 (只有表單類型才可使用此屬性) */
+        input:focus,
+        select:focus { /* 這裡可以優化  使用並集選擇器 */
+            color: orange;
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+    <a href="https://www.google.com.tw/">GOOGLE</a>
+    <a href="https://www.youtube.com/?gl=TW&tab=w1">YOUTUBE</a>
+    <span>尚硅谷</span>
+    <br>
+    <input type="text">
+    <br>
+    <input type="text">
+    <br>
+    <input type="text">
+    <br>
+    <select>
+        <option value="Taiei">台北</option>
+        <option value="Taichung">台中</option>
+    </select>
+</body>
+</html>

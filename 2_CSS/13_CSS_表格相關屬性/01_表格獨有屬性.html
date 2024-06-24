@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>01_邊框相關屬性</title>
+    <style>
+        /* 表格跨行跨列 colspan rowspan 只能通過html屬性改變 CSS不行 */
+        table {
+            border: 2px green solid;
+            width: 500px;
+            /* 控制表格列寬 */
+            table-layout: fixed;
+            /* 控制單元格間距(生效前提是不能合併邊框) */
+            border-spacing: 10px;
+            /* 合併相鄰的單元格的邊框 */ 
+            /* separate 默認值分離 collapse 合併 */
+            /* 一旦合併 border-spacing 就不奏效了 且外邊筐會消失 */
+            border-collapse: separate;
+            /* 隱藏沒有內容的單元格 */
+            /* 默認值是show 隱藏的是hide */
+            empty-cells: hide;
+            /* 設置表格標題的位置 top/bottom */
+            caption-side: top;
+        }
+        td,th {
+            border: 2px orange solid;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <caption>人員信息</caption>
+        <thead>
+            <tr>
+                <th>序號</th>
+                <th>姓名</th>
+                <th>年齡</th>
+                <th>性別</th>
+                <th>政治面貌</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>張三</td>
+                <td>18</td>
+                <td>男</td>
+                <td>黨員</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>李四</td>
+                <td>19</td>
+                <td>女</td>
+                <td>團員</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>王五</td>
+                <td>20</td>
+                <td></td>
+                <td>群眾</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>趙六</td>
+                <td>21</td>
+                <td>女</td>
+                <td>黨員</td>
+            </tr>
+        </tbody>
+    </table>    
+</body>
+</html>

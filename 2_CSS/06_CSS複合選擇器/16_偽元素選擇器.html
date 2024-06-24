@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>16_偽元素選擇器</title>
+    <style>
+        /* 甚麼是元素?  很像元素，但不是元素(element)，是元素中的一些特殊位置 */
+
+        /* 選中的是div中的一個文字 */
+        div::first-letter {
+            color: red;
+            font-size: 30px;
+        }
+
+        /* 選中的是div中的第一行文字 */
+        div::first-line {
+            background-color: yellow;
+        }
+
+        /* 選中的是div中被鼠標選擇的文字 */
+        div::selection {
+            background-color: green;
+            color: brown;
+        }
+
+        /* 選中的是input元素中的提示文字 */
+        input::placeholder {
+            color: skyblue;
+        }
+
+        /* 選中的是最開始的位置，隨後創建一個子元素 */
+        p::before {
+            content:"$" ;
+            color: red;
+        }
+
+        /* 選中的是最後的位置，隨後創建一個子元素 */
+        p:after {
+            content:".00" ;
+            color: brown;
+        }
+    </style>
+</head>
+<body>
+    <!-- lorem 可以直接生成一段英文 lorem後面加上數字幾就是生成幾個詞語 -->
+    <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur molestias et illum dolorem quo nobis at possimus non accusamus earum. Dolorum aspernatur cum culpa, nemo fugit magnam similique minima, dicta nisi asperiores velit tenetur explicabo dolores expedita. Eum, nihil? Alias unde amet deserunt omnis possimus nulla modi ex pariatur. Quod, similique! Vero accusantium similique possimus explicabo in? Explicabo, debitis aspernatur!</div>
+    <br>
+    <input type="text" placeholder="請輸入您的用戶名">
+    <p>199</p>
+    <p>199</p>
+    <p>199</p>
+    <p>199</p>
+</body>
+</html>

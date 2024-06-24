@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>13_偽類選擇器_UI偽類</title>
+    <style>
+        /* 選中的是勾選的複選框或單選按鈕 */
+        input:checked {
+            width: 100px;
+            height: 100px;
+        }
+        /* 選中的是被禁用的input元素 */
+        input:disabled {
+            background-color: skyblue;
+        }
+        /* 選中的是可用的input元素 用的不多 因為enabled是可以省略的 */
+        input:enabled {
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+    <!-- UI user interfacr 用戶介面 -->
+    <input type="checkbox">
+    <input type="radio" name="gerder">
+    <input type="radio" name="gerder">
+    <br>
+    <input type="text">
+    <input type="text" disabled>
+</body>
+</html>

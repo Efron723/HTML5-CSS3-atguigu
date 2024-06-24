@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>16_margin合併問題</title>
+    <style>
+        /* 上面兄弟的下外邊距跟下面兄弟的上外邊距會合併 取一個最大的值 左右兄弟的左右邊距不會合併 */
+        .box {
+            width: 200px;
+            height: 200px;
+        }
+        .box1 {
+            background-color: deepskyblue;
+            margin-bottom: 50px;
+        }
+        .box2 {
+            background-color: orange;
+            margin-top: 50px;
+        }
+
+        .test {
+            width: 200px;
+            height: 200px;
+            display: inline-block;
+        }
+        .test1 {
+            background-color: purple;
+            margin-right: 50px;
+        }
+        .test2 {
+            background-color: tomato;
+            margin-left: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box box1">1</div>
+    <div class="box box2">2</div>
+    <hr>
+    <div class="test test1">1</div><div class="test test2">2</div>
+</body>
+</html>

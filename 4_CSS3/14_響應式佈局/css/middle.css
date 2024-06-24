@@ -1,0 +1,5 @@
+@media screen and (768px<=width<=992px) {
+    h1 {
+        background-color: blue;
+    }
+}

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>04_旋轉</title>
+    <style>
+        .outer {
+            width: 200px;
+            height: 200px;
+            border: 2px solid black;
+            margin: 0 auto;
+            margin-top: 100px;
+            transform-style: preserve-3d;
+            perspective: 300px;
+            perspective-origin: 102px 102px;
+        }
+        .inner {
+            width: 200px;
+            height: 200px;
+            background-color: rgba(135, 207, 235, 0.692);
+            transform: rotateX(50deg); /* 繞著X軸旋轉 */
+            transform: rotateY(50deg); /* 繞著Y軸旋轉 */
+            transform: rotate3d(1,1,1,30deg); /* 分別代表XYZ軸 0關閉1開啟 最後寫角度 */
+            transform: rotate(20deg); /* 繞著Z軸旋轉 */
+        }
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <div class="inner">你好啊</div>
+    </div>
+</body>
+</html>

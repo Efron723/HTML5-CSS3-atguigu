@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <title>03_後代選擇器</title>
+    <style>
+        ul li {  /* 標籤是ui裡面的li */
+            color: red;
+        }
+        ol li {
+            color: green;
+        }
+        ul li a {  /* li是可以省略的 */  /* 標籤是ui裡面的li裡面的a */
+            color: orange;
+        }
+        ol li a {  /* li是可以省略的 */
+            color: gray;
+        }
+        .subject li {   /* 標籤是subject裡面的li */
+            color: blue;
+        }
+        .subject #front-end {  /* 標籤是subject裡面的front-end */
+            color: brown;
+        }
+
+        /* 以下這兩種寫法都可以 */
+
+        /* ol div {
+            color: chocolate;
+        } */
+        .subject div.front-end {
+            color: chocolate;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>抽菸</li>
+        <li>喝酒</li>
+        <li>
+            <a href="#">燙頭</a>
+        </li>
+    </ul>
+    <hr>
+    <ol>
+        <li>張三</li>
+        <li>李四</li>
+        <li>
+            <a href="">王五</a>
+        </li>
+    </ol>
+    <hr>
+    <ol class="subject">
+        <li id="front-end">前端</li>
+        <div class="front-end">學好前端，掛帥楊翻!</div>
+        <li>Java</li>
+        <li>大數據</li>
+        <li>UI</li>
+    </ol>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>03_位移</title>
+    <style>
+        .outer {
+            width: 200px;
+            height: 200px;
+            border: 2px solid black;
+            margin: 0 auto;
+            margin-top: 100px;
+            transform-style: preserve-3d;
+            perspective: 300px;
+            perspective-origin: 102px 102px;
+        }
+        .inner {
+            width: 200px;
+            height: 200px;
+            background-color: rgba(135, 207, 235, 0.692);
+            /* 在Z朝著你來或遠離你  因為沒有厚度所以不是很明顯  只是放大縮小 */
+            transform: translateZ(150px);
+            /* transform: translate3d(100px, 100px, 100px);  
+            (如果要用複合屬性 一定要三個值都寫 且必須加逗號)
+            (X Y 軸可以寫百分比 因為是參考父元素 但Z軸是無限大不能寫百分比) */
+        }
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <div class="inner">你好啊</div>
+    </div>
+</body>
+</html>

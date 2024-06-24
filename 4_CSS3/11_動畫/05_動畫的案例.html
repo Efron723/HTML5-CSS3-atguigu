@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>05_動畫的案例</title>
+    <style>
+        div {
+            width: 130px;
+            height: 130px;
+            background-image: url(../images/bike.png);
+            margin: 0 auto;
+            margin-top: 400px;
+            /* 總共32張圖片減去自己地1張 所以是31張 */
+            animation: bike 0.5s steps(31) infinite alternate;
+        }
+        div:hover {
+            animation-play-state: paused;
+        }
+        @keyframes bike {
+            0% {
+
+            }
+            100% {
+                background-position: 0px -4030px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="div"></div>
+</body>
+</html>

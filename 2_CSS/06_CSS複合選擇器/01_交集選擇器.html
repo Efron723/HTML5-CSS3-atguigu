@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <title>01_交集選擇器</title>
+    <style>
+        .rich {
+            color: aqua;
+        }
+        .beauty {
+            color: blueviolet;
+        }
+        p.beauty {
+            color: blue;
+        }
+        .rich.beauty {  /* 標籤要是rich也要是beauty的 */
+            color: brown;
+        }
+    </style>
+</head>
+<body>
+    <h2 class="rich">土豪張三</h2>
+    <h2 class="beauty">明星李四</h2>
+    <h2 class="rich beauty">土豪明星王五</h2> <!-- 執行CSS代碼跟標籤裡面的先後順序無關 是看CSS的先後順序 -->
+    <hr>
+    <p class="beauty">小狗旺財</p>
+    <p class="beauty">小豬佩奇</p>
+</body>
+</html>

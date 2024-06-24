@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>02_選擇器優先級_詳細聊</title>
+    <style>
+        /* 
+            格式:(a,b,c)
+            a :  ID 選擇器的個數
+            b :  類、偽類、屬性選擇器的個數
+            c :  元素、偽元素選擇器的個數
+            !important(寫在屬性質的後面) > style=""(行內樣式) > ID選擇器 > 類選擇器 > 元素選擇器
+            再依照格式:(a,b,c)去比較優先級
+            如果格式都一樣 按照後來者居上去定義
+        */
+        /* 
+            一般 !important 用於項目上線時樣式沒有跑出來 更改選擇器後還是沒變化 
+            緊急使用 !important 更改樣式 之後再慢慢檢查格式優先級
+        */
+
+        #atguigu {  /* (1 , 0 , 0) */
+            color: orange; 
+        }
+
+        .container span.slogan {   /* (0 , 2 , 1) */
+            color: red;
+        }
+
+        div>p>span:nth-child(1) {   /* (0 , 1 , 3) */
+            color: green;
+        }
+
+        .slogan {   /* (0 , 1 , 0) */
+            color: purple !important;  /* 有 !imortant 優先級最大 */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <p>
+            <!-- 有行內樣式但上面有 !imortant 所以優先級第2大 -->
+            <span class="slogan" id="atguigu" style="color: blue;">尚硅谷，讓天下沒有難學的技術!</span>
+            <span>歡迎同學們來學習!</span>
+        </p>
+    </div>
+</body>
+</html>

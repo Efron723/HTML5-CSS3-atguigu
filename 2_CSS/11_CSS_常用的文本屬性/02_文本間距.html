@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>02_文本間距</title>
+    <style>
+        div {
+            font-size: 30px;
+        }
+
+        /* 字母間距 且可以是負值 但最後文字會全部壓縮在一起 */
+        .atguigu2 {
+            letter-spacing: 20px;
+        }
+        
+        /* 單詞間距 通過空格識別單詞 */
+        .atguigu3 {
+            word-spacing: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div>you got a dream, you gotta protect it.尚硅谷1</div>
+    <div class="atguigu2">you got a dream, you gotta protect it.尚硅谷2</div>
+    <div class="ayguigu3">you got a dream, you gotta protect it.尚硅谷3</div>
+</body>
+</html>

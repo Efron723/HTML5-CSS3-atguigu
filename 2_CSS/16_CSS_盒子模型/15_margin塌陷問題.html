@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>15_margin塌陷問題</title>
+    <style>
+        .outer {
+            width: 400px;
+            /* height: 400px; */
+            background-color: gray;
+
+            /* margin塌陷解決方案 有三種 前兩種會影響到content的大小 不實用 */
+
+            /* border: 1px solid red; */
+
+            /* padding: 1px; */
+
+            overflow: hidden;
+        }
+        .inner1 {
+            width: 100px;
+            height: 100px;
+            background-color: orange;
+            /* 下面這段代碼是有問題的 */
+            margin-top: 50px;
+        }
+        .inner2 {
+            width: 100px;
+            height: 100px;
+            background-color: green;
+            /* 下面這段代碼是有問題的 */
+            margin-bottom: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <div class="inner1">inner1</div>
+        <div class="inner2">inner2</div>
+    </div>
+    <div>test</div>
+</body>
+</html>

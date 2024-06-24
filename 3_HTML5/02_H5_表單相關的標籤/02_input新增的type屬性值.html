@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>02_input新增的type屬性值</title>
+</head>
+<body>
+    <!-- 
+        input type 屬性值  
+        text
+        password
+        radio
+        checkbox
+        hidden
+        submit
+        reset
+        button
+        
+        H5 新增的 type
+        email
+        url
+        number
+        search
+        tel
+        range  沒必要加required  
+        color  沒必要加required
+        date
+        month
+        week
+        time
+        datetime-local
+        
+        form 表單新增一個novalidate  有時臨時不為表單做校驗  可為空 不是條件也可以提交
+    -->
+    <form action="" novalidate>
+        郵箱: <input type="email" required name="email">
+
+        <!-- url: <input type="url" required name="url"> -->
+
+        <!-- 數值: <input type="number" required name="number" step="2" max="80" min="0"> -->
+
+        <!-- 搜索: <input type="search" required name="keyword"> -->
+
+        <!-- 電話: <input type="tel" required name="phone"> -->
+
+        <!-- 光照強度: <input type="range" name="range" max="80" min="0" value="33"> -->
+
+        <!-- 顏色: <input type="color" name="color"> -->
+
+        <!-- 日期: <input type="date" required name="date"> -->
+
+        <!-- 月份: <input type="month" required name="month"> -->
+
+        <!-- 周: <input type="week" required name="week"> -->
+
+        <!-- 時間: <input type="time" required name="time"> -->
+
+        <!-- 日期+時間: <input type="datetime-local" required name="time2"> -->
+        <br>
+        <button>提交</button>
+    </form>
+</body>
+</html>

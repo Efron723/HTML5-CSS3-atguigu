@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>01_伸縮容器_伸縮項目</title>
+    <style>
+        .outer {
+            width: 1000px;
+            height: 600px;
+            background-color: #888;
+        
+            /* 
+            將該元素變為了伸縮容器(開啟了flex佈局)
+            只有子元素會變為伸縮項目而且會塊狀化 不包含孫子/重孫子元素 
+            
+            還有inline-flex 將兩個大的容器變為行內塊且開啟flex
+            但inline-flex幾乎不用 因為行內塊只要有回車中間就會有縫隙
+            解決辦法就是在其父元素開啟flex
+            也就是在 body裡面開啟flex
+            */
+            display: flex;
+        }
+        .inner {
+            width: 200px;
+            height: 200px;
+            border: 1px solid black;
+            background-color: skyblue;
+            box-sizing: border-box; /* 最終寬度 不計算外面border寬度 */
+        }
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <div class="inner inner1">1</div>
+        <div class="inner inner2">2</div>
+        <div class="inner inner3">3</div>
+    </div>
+</body>
+</html>

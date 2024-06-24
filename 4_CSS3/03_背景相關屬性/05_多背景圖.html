@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>05_多背景圖</title>
+    <style>
+
+        /* 多背景圖要使用 background 複合屬性   不能用background-image */
+
+        div {
+            width: 400px;
+            height: 400px;
+            border: 1px solid black;
+            background: url(../images/bg-lt.png) no-repeat left top,
+                        url(../images/bg-rt.png) no-repeat right top,
+                        url(../images/bg-lb.png) no-repeat left bottom,
+                        url(../images/bg-rb.png) no-repeat right bottom;
+        }               
+    </style>
+</head>
+<body>
+    <div></div>
+</body>
+</html>

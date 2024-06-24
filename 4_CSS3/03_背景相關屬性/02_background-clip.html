@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>02_background-clip</title>
+    <style>
+        .box1 {
+            width: 400px;
+            height: 400px;
+            background-color: skyblue;
+            margin: 0 auto;
+            font-size: 130px;
+            font-weight: bold;
+            padding: 50px;
+            border: 50px dashed rgba(255, 0, 0, 0.5);
+
+            /*
+            background-clip  (背景剪切/裁切)以外的背景圖或背景顏色不可見
+            border-box  (默認值)  border以外的背景圖不可見
+            paddingbox  從padding以外的背景圖以及背景顏色都不可見
+            content-box 從content以外的背景圖以及背景顏色都不可見
+            text  (前提必須給文字加上color: transparent 透明)
+                  (這還是實驗性屬性必須加上私有前墜-webkit-)
+            */
+
+            background-image: url(../images/bg02.jpg);
+            background-repeat: no-repeat;
+            background-origin: border-box;
+            background-clip: border-box;
+        }
+    </style>
+</head>
+<body>
+    <div class="box1">你好啊</div>
+</body>
+</html>

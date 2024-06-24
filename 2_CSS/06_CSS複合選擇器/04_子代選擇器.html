@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <title>04_子代選擇器</title>
+    <style>
+        div>a { /* div的兒子a */
+            color: red;
+        }
+        
+        /* 以下這兩種寫法都可以 */
+        
+        div>p>a {
+            color: green;
+        }
+        /* div p a {
+            color: green;
+        } */
+
+        .foot>a {
+            color: chocolate;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <a href="#">張三</a>
+        <a href="#">李四</a>
+        <a href="#">王五</a>
+        <p>
+            <a href="#">趙六</a>
+            <div class="foot">
+                <a href="#">孫七</a>
+            </div>
+        </p>
+    </div>
+</body>
+</html>

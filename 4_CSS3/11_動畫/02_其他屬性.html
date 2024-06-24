@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>02_其他屬性</title>
+    <style>
+        .outer {
+            width: 1000px;
+            height: 100px;
+            border: 1px solid black;
+        }
+        .inner {
+            width: 100px;
+            height: 100px;
+            background-color: skyblue;
+            animation-name: right2;
+            animation-duration: 2s;
+            animation-delay: 0.5s;
+
+            /* 其他屬性 - start */
+            /* 設置動畫的方式 (跟過渡是一樣的 其中steps(最常用)) */
+            animation-timing-function: steps(20),step-start;
+
+            /* 
+            動畫播放的次數 
+            number: 循環次數
+            infinite 無限循環 
+            */
+            animation-iteration-count: infinite;
+            
+            /* 
+            動畫的方向 
+            normal 默認值從左往右 
+            reverse 反轉從右到左
+            alternate 往復運動 左到右到左持續下去
+            alternate-reverse 從又到左開始的往復運動
+            */
+            animation-direction: alternate; /* 動畫播放次數必須>=2次 */
+
+            /* 
+            動畫以外的狀態 (不發生動畫的時候在哪裡) 
+            forwards 動畫結束停在最後一幀
+            backwards 動畫結束停在第一幀
+
+            要使用此屬性 必須沒有動畫撥放次數屬性
+            播放次數屬性沒有動畫方向的往復運動也會失效
+            */
+            animation-fill-mode: backwards;
+
+        }
+
+        .outer:hover .inner {
+            /* 
+            播放的播放狀態 結合hover
+            running 運動 (默認)
+            paused 暫停
+            */
+            animation-play-state: paused;
+        }
+
+        @keyframes right {
+            from {
+                transform: translate(0px);
+            }
+            to {
+                transform: translate(900px);
+                background-color: brown;
+            }
+        }
+        @keyframes right2 {
+            0% {
+
+            }
+            20% {
+                background-color: red;
+            } 
+            40% {
+                background-color: orange;
+            }
+            60% {
+                background-color: yellow;
+            }
+            80% {
+                background-color: green;
+            }
+            100% {
+                transform: translate(900px); rotate: (360deg);
+                background-color: purple;
+                border-radius: 50%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <div class="inner"></div>
+    </div>    
+</body>
+</html>

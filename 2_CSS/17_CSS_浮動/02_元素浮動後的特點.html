@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>02_元素浮動後的特點</title>
+    <style>
+        /*
+        1.脫離文檔流 就是飛起來了
+        2.浮動後寬高都是被內容撐開 且可以設置寬高
+        3.不會獨佔一行  可以與其他元素共用一行
+        4.不會margin合併及margin塌陷  能更完美設置四個方向的margin和pdding
+        5.不會像行內塊被當文本處理 (沒有幽靈空白問題)
+        */
+        .outer {
+            width: 800px;
+            height: 400px;
+            background-color: gray;
+            padding: 10px;
+            text-align: center;
+        }
+        .box {
+            font-size: 20px;
+            padding: 10px;
+        }
+        .box1 {
+            background-color: skyblue;
+        }
+        .box2 {
+            background-color: orange;
+            float: left;
+            margin-left: 20px;
+            margin-right: 20px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+        .box3 {
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <div class="box box1">盒子1</div>
+        <div class="box box2">盒子2</div>
+        <div class="box box3">盒子3</div>
+    </div>
+</body>
+</html>

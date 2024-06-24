@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>02_resize</title>
+    <style>
+
+        /*
+        resize 用戶可以於右下角自行挑整大小
+               前提是必須加上 overflow: hidden auto scroll
+               因為盒子裡面可能還有東西 你必須隱藏起來調整大小後才可以顯現出來 
+        horizontal 只能條整水平 
+        vertical 只能調整垂直
+        both  水平垂直都能條
+        none (默認值 不能調整大小)
+        需跟 overflow 配合
+        */
+
+        .box1 {
+            width: 200px;
+            height: 200px;
+            background-color: orange;
+            resize: both;
+            overflow: hidden;
+        }
+        .box2 {
+            width: 400px;
+            height: 100px;
+            background-color: skyblue;
+        }
+    </style>
+</head>
+<body>
+    <div class="box1">
+        <div class="box2"></div>
+    </div>
+</body>
+</html>

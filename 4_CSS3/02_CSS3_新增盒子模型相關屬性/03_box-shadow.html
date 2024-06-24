@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>03_box-shadow</title>
+    <style>
+
+        /* box-shadow: h-shadow v-shadow blur spread color inset */
+
+        .box1 {
+            width: 400px;
+            height: 400px;
+            background-color: orange;
+            margin: 0 auto;
+            margin-top: 100px;
+            font-size: 40px;
+
+            /* 寫兩個值 含意: 水平位置 垂直位置 */
+            box-shadow: 10px 10px;
+
+            /* 寫三個值 含意: 水平位置 垂直位置 陰影模糊程度 */
+            box-shadow: 10px 10px 10px;
+
+            /* 寫四個值 含意: 水平位置 垂直位置 陰影模糊程度 陰影顏色 (最常用的) */  
+            box-shadow: 10px 10px 10px blue;
+
+            /* 寫五個值 含意: 水平位置 垂直位置 陰影模糊程度 陰影外沿 陰影顏色 */
+            box-shadow: 10px 10px 10px 5px blue;
+
+            /* 寫六個值 含意: 水平位置 垂直位置 陰影模糊程度 陰影外沿 陰影顏色 內陰影 */
+            box-shadow: 10px 10px 10px 5px blue inset;
+
+            box-shadow: 0px 0px 100px red inset;  /* 好看一點的 */
+
+            /* 以下為實際開發中的實際應用  過渡 */
+
+            position: relative;
+            top: 0;
+            left: 0;
+            transition: 0.3s linear all;
+        }
+        .box1:hover {
+            box-shadow: 0 0 20px black;
+            top: -3px;
+            left: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="box1">你好啊</div>
+</body>
+</html>

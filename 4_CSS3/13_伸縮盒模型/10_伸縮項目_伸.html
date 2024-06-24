@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>10_伸縮項目_伸</title>
+    <style>
+        .outer {
+            width: 1000px;
+            height: 900px;
+            background-color: #888;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+        }
+        .inner {
+            width: 200px;
+            height: 200px;
+            border: 1px solid black;
+            background-color: skyblue;
+            box-sizing: border-box;
+
+            /* 如果子元素都grow同樣倍數 可以直接統一寫 */
+            /* 默認值是 0 */
+            /* flex-grow: 1; */
+        }
+
+        /* 那一行中剩餘的空間乘以每個元素能分到的比例值 + 原本元素大小 = 最終大小 */
+        /* 
+        ex: 一行中剩餘300px 
+        inner1 300*1/6=50px  200+50=250px
+        inner2 300*2/6=100px 300+100=400px
+        inner3 300*3/6=150px 200+150=350px
+        三個最終大小相加一定要等於最終設置父元素的寬度=1000px
+        */
+        .inner1 {
+            flex-grow: 1; /* 六分之一 */
+        }
+        .inner2 {
+            width: 300px;
+            flex-grow: 2; /* 六分之二 */
+        }
+        .inner3 {
+            flex-grow: 3; /* 六分之三 */
+        }
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <div class="inner inner1">1</div>
+        <div class="inner inner2">2</div>
+        <div class="inner inner3">3</div>
+    </div>
+</body>
+</html>

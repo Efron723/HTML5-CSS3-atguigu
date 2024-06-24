@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>01_邊框圓角</title>
+    <style>
+
+        /* border-radius 邊框圓角 最大值是正方形寬或高的一半 變成一個圓 */
+
+        div {
+            width: 400px;
+            height: 400px;
+            border: 2px solid black;
+            margin: 0 auto;
+
+            /* 第一種 */
+            border-radius: 200px;
+            /* 第二種 */
+            border-radius: 50%;
+            /* 第三種 */
+            border-top-left-radius: 100px;
+            border-top-right-radius: 50px;
+            border-bottom-right-radius: 20px;
+            border-bottom-left-radius: 10px;
+            /* 第四種 橢圓 前面是X後面是Y的半徑 */
+            border-top-left-radius: 100px 50px;
+            border-top-right-radius: 50px 20px;
+            border-bottom-right-radius: 20px 10px;
+            border-bottom-left-radius: 10px 5px;
+            /* 第五種 複合屬性 按照順時鐘 左上右上右下左下 */
+            border-radius: 100px 50px 50px 20px / 20px 10px 10px 5px;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+</body>
+</html>

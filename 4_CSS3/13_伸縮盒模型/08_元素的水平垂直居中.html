@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>08_元素的水平垂直居中</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: space-evenly;
+        }
+        .outer1 {
+            width: 400px;
+            height: 400px;
+            background-color: gray;
+
+            /* 方法一 利用flex開啟水平垂直居中小技巧 */
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: center;
+            align-items: center;
+        }
+        .outer2 {
+            width: 400px;
+            height: 400px;
+            background-color: gray;
+
+            /* 方法二 最簡單的 開啟彈性盒子 */
+            display: flex;  
+        }
+        .inner1 {
+            width: 100px;
+            height: 100px;
+            background-color: orange;
+        }
+        .inner2 {
+            width: 100px;
+            height: 100px;
+            background-color: orange;
+
+            /* 方法二 開啟彈性盒子後 margin: auto; */
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="outer1">
+        <div class="inner inner1"></div>
+    </div>
+    <div class="outer2">
+        <div class="inner inner2"></div>
+    </div>
+</body>
+</html>

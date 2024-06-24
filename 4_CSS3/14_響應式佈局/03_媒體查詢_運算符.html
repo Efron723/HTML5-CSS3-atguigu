@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>03_媒體查詢_運算符</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+            height: 200px;
+            background-color: gray;
+            font-size: 100px;
+            text-align: center;
+            line-height: 200px;
+            font-weight: bolder;
+        }
+
+        /* 檢測到視口的寬度為700px<width<800px時，應用如下樣式 */
+        @media screen and (699px<width<801px) {
+            h1 {
+                background-color: green;
+            }
+        }
+        /* 上下這兩個種寫法都可以 */
+        /* 且運算符 */
+        @media screen and (min-width:700px) and (max-width:800px) {
+            h1 {
+                background-color: green;
+            }
+        }
+        /* 或運算符 */
+        @media (min-width:700px) or (max-width:800px) {
+            h1 {
+                background-color: orange;
+            }
+        }
+        /* 否定運算符 */
+        @media not screen {
+            h1 {
+                background-color: orange;
+            }
+        }
+        /* 肯定運算符 */
+        /* 為IE設計的only屬性 檢測到only就不會繼續往下執行了 */
+        @media only screen {
+            h1 {
+                background-color: orange;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>你好啊</h1>
+</body>
+</html>

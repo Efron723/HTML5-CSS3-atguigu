@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>02_媒體查詢_媒體特性</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+            height: 200px;
+            background-color: gray;
+            font-size: 100px;
+            text-align: center;
+            line-height: 200px;
+            font-weight: bolder;
+        }
+
+        /* 檢測到視口的寬度為800px時，應用如下樣式 */
+        @media (width:800px) {
+            h1 {
+                background-color: green;
+            }
+        }
+
+        /* 檢測到視口的寬度小於等於700px時，應用如下樣式 */
+        @media (max-width:700px) {
+            h1 {
+                background-color: orange;
+            }
+        }
+
+        /* 檢測到視口的寬度大於等於900px時，應用如下樣式 */
+        @media (min-width:900px) {
+            h1 {
+                background-color: skyblue;
+            }
+        }
+
+        /* 檢測到視口的高度為800px時，應用如下樣式 */
+        @media (height:800px) {
+            h1 {
+                background-color: yellow;
+            }
+        }
+
+        /* 
+        檢測到你電腦屏幕的寬度為1920px時
+        需注意設定縮放百分比會影響寬度數值
+        應用如下樣式 
+        */
+        @media (device-width:1920px) {
+            h1 {
+                background-image: linear-gradient(30deg, red, green);
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>你好啊</h1>
+</body>
+</html>

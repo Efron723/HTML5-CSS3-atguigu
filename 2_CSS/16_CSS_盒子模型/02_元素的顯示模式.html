@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>02_元素的顯示模式</title>
+    <style>
+        /* 
+        塊級元素 (block)
+        1.獨佔一行
+        2.寬度稱滿整個父元素
+        3.默認高度 由內容撐開
+        4.可以由CSS設置寬高
+        */
+        #d1 {
+            background-color: skyblue;
+            width: 200px;
+            height: 200px;
+        }
+        #d2 {
+            background-color: orange;
+            width: 200px;
+            height: 200px;
+        }
+        #d3 {
+            background-color: green;
+            width: 200px;
+            height: 200px;
+        }
+
+        /*
+        行內元素 (inline)
+        1.不獨佔一行
+        2.默認寬度 由內容撐開
+        3.默認高度 由內容撐開
+        4.無法透過CSS設置寬高
+        */
+        .one {
+            background-color: skyblue;
+        }
+        .two {
+            background-color: orange;
+        }
+
+        /* 
+        行內塊元素 (inline-block) 
+        1.不獨佔一行
+        2.默認寬度 由內容撐開
+        3.默認高度 由內容撐開
+        4.可以透過CSS設置寬高
+        */
+        img {
+            width: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div id="d1">山迴路轉不見君</div>
+    <div id="d2">雪上空留馬行處</div>
+    <div id="d3">風裡雨裡我在尚硅谷等你</div>
+    <hr>
+    <span class="one">人之初</span>
+    <span class="two">性本善</span>
+    <hr>
+    <img src="../images/悟空.jpg" alt="悟空">
+    <img src="../images/悟空.jpg" alt="悟空">
+    <img src="../images/悟空.jpg" alt="悟空">
+</body>
+</html>

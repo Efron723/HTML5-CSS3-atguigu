@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <title>id選擇器</title>
+    <style>
+        #earthy {
+            color: brown;
+        }
+        #turn-earthy {
+            color: skyblue;
+        }
+        .turn {
+            font-size: 50px;
+        }
+    </style>
+</head>
+<body>
+    <h1>歡迎來到土味官網, 土的味道我知道</h1>
+    <br>
+    <h2 id="earthy">土味情話</h2>
+    <h3>作者: 優秀的網友們</h3>
+    <p >我對你說: 萬水千山總是情, 愛我多點行不行!</p>
+    <p >我對你說: 草莓、藍莓、蔓越莓, 今天你想我了沒?</p>
+    <p >我對你說: 我心理給你留了一塊地, 我的死心踏地!</p>
+    <span>哈哈</span>
+    <br>
+    <h2 id="turn-earthy" class="turn">反殺土味情話</h2> <!-- 標籤裡可以同時使用id & class -->
+    <h3>作者: 更優秀的網友們</h3>
+    <p >你回答我: 一寸光陰一寸金, 勸你死了這條心!</p>
+    <p >你回答我: 西瓜, 南瓜, 哈密瓜, 把你打成大傻瓜!</p>
+    <p >你回答我: 我心裡只有一塊地, 我的瑪莎拉蒂!</p>
+
+    <!-- 
+        基本選擇器總結:
+        通配選擇器  選中所有標籤 一般用於清除樣式   *{color:red}
+        元素選擇器  選中所有同種標籤                h1 {color:red}
+        類選擇器    選中所有特定類名(class值)的元素 
+                    使用頻率很高                   .say {color:red}
+        ID選擇器    選種特定id值的那個元素(唯一的)  #earthy {color:red}
+     -->
+</body>
+</body>
+</html>

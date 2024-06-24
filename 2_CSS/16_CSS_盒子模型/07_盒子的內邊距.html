@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>07_盒子的內邊距</title>
+    <style>
+        #d1 {
+            width: 400px;
+            height: 400px;
+            
+            /* 左邊的內邊距 */
+            padding-left: 20px;
+            /* 上內邊距 */
+            padding-top: 30px;
+            /* 右內邊距 */
+            padding-right: 40px;
+            /* 抵內邊距 */
+            padding-bottom: 50px;
+
+            /* 複合屬性 寫一個值 四個方向內邊距是一樣的 */
+            /* padding: 20px; */
+
+            /* 複合屬性 寫兩個值 上下、左右 */
+            /* padding: 10px 20px; */
+
+            /* 複合屬性 寫三個值 上、左右、下 */
+            /* padding: 10px 20px 30px; */
+
+            /* 複合屬性 寫四個值 上、右、下、左 */
+            /* padding: 10px 20px 30px 40px; */
+
+            font-size: 20px;
+            background-color: skyblue;
+        }
+
+        /* 行內元素左右內邊距沒問題 上下內邊距不能完美設置 文字會壓在上面 */
+        span {
+            background-color: orange;
+            font-size: 20px;
+            padding: 20px;
+        }
+        /* 塊級元素 行內塊元素 四個方向內邊距都可以完美設置 */
+        img {
+            width: 200px;
+            padding: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div id="d1">你好啊</div>
+    <hr>
+    <span>我很好</span>
+    <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste obcaecati id incidunt aspernatur esse ex ipsa deleniti, veniam ea, quibusdam autem. Amet aliquam corporis commodi quas, alias quam a fugit.</div>
+    <hr>
+    <img src="../images/悟空.jpg" alt="">
+    <div>小姐姐</div>
+</body>
+</html>

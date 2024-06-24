@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>03_文本修飾</title>
+    <style>
+        /* 
+        overline 上底線 underline 下底線 line-through 刪除線 none 無樣式 
+        dotted 虛線 wavy 波浪線 
+        也可以指定顏色
+        無順序上要求 但通常先指定線的位置 再給他樣式 最後上顏色
+        */
+        div {
+            font-size: 40px;
+        }
+        .atguigu1 {
+            text-decoration: overline dotted rgba(0, 255, 0, .3);
+        }
+        .atguigu2 {
+            text-decoration: underline wavy #00f4;
+        }
+        .atguigu3 {
+            text-decoration: line-through;
+        }
+        .atguigu4,ins,del {
+            font-size: 40px;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="atguigu1">尚硅谷1</div>
+    <div class="atguigu2">尚硅谷2</div>
+    <div class="atguigu3">尚硅谷3</div>
+    <a class="atguigu4" href="#">尚硅谷4</a>
+    <ins>測試1</ins>  <!-- 插入文本語意 -->
+    <del>測試2</del>  <!-- 刪除文本語意 -->
+</body>
+</html>

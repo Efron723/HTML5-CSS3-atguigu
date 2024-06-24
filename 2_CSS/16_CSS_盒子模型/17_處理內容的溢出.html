@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>17_處理內容的溢出</title>
+    <style>
+        /* overflow 可選值 visible(默認值)  hidden scroll auto */
+        #d1 {
+            width: 400px;
+            height: 200px;
+            background-color: skyblue;
+
+            overflow: auto;
+
+            /* 下面這兩個代碼不推薦使用  因為是實驗性屬性 */
+
+            /* overflow-x: hidden;
+
+            overflow-y: scroll; */
+        }
+        #d2 {
+            width: 1000px;
+            background-color: orange;
+        }
+    </style>
+</head>
+<body>
+    <div id="d1">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Animi reprehenderit quaerat alias dolorem
+        pariatur tenetur quae non asperiores facilis minima laborum nostrum culpa quisquam, autem fuga sint doloremque
+        <div id="d2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum blanditiis beatae, harum cumque ipsum qui quibusdam veritatis ipsa dolor vero temporibus accusamus similique vel earum, aspernatur fugit neque culpa laudantium, tenetur ea. Quidem, maiores veniam dolores impedit adipisci eveniet neque velit delectus temporibus animi, fuga cupiditate id ipsum ullam! Consectetur!</div>
+        eveniet ipsum possimus eaque corporis. Fuga itaque ex inventore veritatis sunt provident expedita, perspiciatis
+        a voluptas, nemo voluptate, amet ipsum! Quos rerum quidem dolores officia a fuga blanditiis ipsa tenetur
+        obcaecati officiis quaerat rem itaque aspernatur cupiditate explicabo, quis aperiam harum at unde quae
+        consequatur magni quod aut dolore. Aut ab odio quam, corporis illo nostrum voluptatum quidem adipisci provident
+        quisquam dolorum magnam, voluptates quia in similique aperiam fugit aspernatur error consequuntur.
+    </div>
+</body>
+
+</html>

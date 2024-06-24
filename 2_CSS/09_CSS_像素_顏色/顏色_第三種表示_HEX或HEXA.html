@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>顏色_第三種表示_HEX或HEXA</title>
+    <style>
+        /* IE瀏覽器不支持HEXA 不支持透明度 */
+        html {
+            background-color: rgba(0, 0, 0);
+        }
+        .atguigu1 {
+            color: #ff0000;
+        }
+        .atguigu2 {
+            color: #00ff00;
+        }
+        .atguigu3 {
+            color: #0000ff;
+        }
+        .atguigu4 {
+            color: #87ceeb88; /* 最後兩位是透明度 00透明 ff不透明 88一半 */
+        }
+        .atguigu5 {
+            color: #fcd8; /* ffccdd 如果是兩兩相對  可以簡寫fcd 但是最後透明度也只能寫一位 最小0最大f  */
+        }
+    </style>
+</head>
+<body>
+    <h2 class="atguigu1">尚硅谷1</h2>
+    <h2 class="atguigu2">尚硅谷2</h2>
+    <h2 class="atguigu3">尚硅谷3</h2>
+    <h2 class="atguigu4">尚硅谷4</h2>
+    <h2 class="atguigu5">尚硅谷5</h2>
+</body>
+</html>

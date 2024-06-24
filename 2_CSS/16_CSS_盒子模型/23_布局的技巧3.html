@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>23_布局的技巧3</title>
+    <style>
+        /* 行內元素跟行內塊元素可被負元素當文本處理 */
+        /* 
+        如何讓子元素在父親中水平居中 
+        子元素為塊元素  給父元素加上 margin: 0 auto
+        子元素為行內元素  給父元素加上 text-align:center
+        */
+        /* 
+        如何讓子元素垂直居中
+        子元素為塊元素  給子元素加上margin-top (父元素content-子元素盒子總高)/2
+        子元素為行內元素 或 行內塊元素
+        讓父元素height=line-height  且  每個子元素都加上 vertical-align:middle
+        若想絕對垂直居中  父元素font-size=0
+        */
+
+        .outer {
+            width: 400px;
+            height: 400px;
+            background-color: gray;
+            text-align: center;
+            line-height: 400px;
+            font-size: 0px;
+        }
+        span {
+            background-color: orange;
+            font-size: 40px;
+            vertical-align: middle;
+        }
+        img {
+            vertical-align: middle;
+        }
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <span>出來玩啊?</span>
+        <img src="../images/悟空.jpg" alt="悟空">
+    </div>
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>兼容性處理</title>
+
+    <!-- 讓IE瀏覽器處於最優的渲染模式 -->
+    <meta http-equiv="X-UA-Compatible" contant="IE=edge">
+    
+    <!-- 針對一些國內的"雙核"瀏覽器的設置, 讓瀏覽器優先使用webkit內核去渲染網頁 -->
+    <meta name="render" content="webkit">
+
+    <!-- 如果小於ie 9 就引入 JS (GOOGLE開發的 讓IE認識H5) -->
+    <!--[if lt ie 9]>
+    <script src="./html5shiv.js"></script>
+    <![endif]-->
+
+    <!-- 
+        lt 小於
+        lte 小於等於
+        gt 大於
+        gte 大於等於
+        ! 邏輯非
+     -->
+
+    <!--[if IE 8]>仅IE8可见<![endif]-->
+    <!--[if gt IE 8]>仅IE8以上可见<![endif]-->
+    <!--[if lt IE 8]>仅IE8以下可见<![endif]-->
+    <!--[if gte IE 8]>IE8及以上可见<![endif]-->
+    <!--[if lte IE 8]>IE8及以下可见<![endif]-->
+    <!--[if !IE 8]>非IE8的IE可见<![endif]-->
+    
+    <style>
+        header {
+            background-color: orange;
+        }
+        footer {
+            background-color: green;
+            height: 100px;
+            line-height: 100px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <!-- 頭部 -->
+    <header>
+        <h1>尚品匯</h1>
+    </header>
+    <hr>
+    <!-- 主導航 -->
+    <nav>
+        <a href="#">首頁</a>
+        <a href="#">訂單</a>
+        <a href="#">購物車</a>
+        <a href="#">我的</a>
+    </nav>
+    <!-- 主要內容 -->
+    <div class="page-content">
+        <!-- 側邊導航 -->
+        <aside style="float: right;">
+            <nav>
+                <ul>
+                    <li><a href="#">秒殺專區</a></li>
+                    <li><a href="#">會員專區</a></li>
+                    <li><a href="#">領取優惠券</a></li>
+                    <li><a href="#">品牌專區</a></li>
+                </ul>
+            </nav>
+        </aside>
+        <!-- 文章 -->
+        <article>
+            <h2>如何一夜暴富</h2>
+            <section>
+                <h3>第一種方式: 通過作夢</h3>
+                <p>你要這麼做夢: XXXXXXXXXXXXXX</p>
+            </section>
+            <section>
+                <h3>第一種方式: 通過買彩票</h3>
+                <p>你要這麼買彩票: XXXXXXXXXXXXXX</p>
+            </section>
+            <section>
+                <h3>第一種方式: 通過學習前端</h3>
+                <p>你要來道尚硅谷學前端: XXXXXXXXXXXXXX</p>
+            </section>
+        </article>
+    </div>
+    <hr>
+    <!-- 頁腳 -->
+    <footer>
+        <nav>
+            <a href="#">友情鏈接1</a>
+            <a href="#">友情鏈接2</a>
+            <a href="#">友情鏈接3</a>
+            <a href="#">友情鏈接4</a>
+        </nav>
+    </footer>
+</body>
+</html>

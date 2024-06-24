@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <title>全局屬性</title>
+    <style>
+        .student{
+            color: hotpink;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        <id>、<class>、<style>、<dir>、<title>、<lang>
+     -->
+    
+     <!-- 
+        <id> 給標籤指定唯一標識
+             不能重複,僅限於同一個HTML裡,不同的HTML可用同一個id
+             以下HTML元素中不能使用,<head> <html> <meta> <script> <style> <title>
+     -->
+    
+     <!-- <class> 給標籤指定種類,通過CSS給標籤設置樣式 --> 
+        <div class="student">123</div>
+        <div class="student">456</div>
+    
+    <!-- <style> 給標籤設置CSS樣式 -->
+        <div style="color: blueviolet;">789</div>
+
+    <!-- <dir> 內容的方向 ltr or rtl -->
+        <!-- <bdo dir="rtl">我愛你</div> 修改文字閱讀順序 -->
+        <!-- <div dir="rtl">我愛你</div> 修改文字屏幕靠左或靠右 -->
+
+    <!-- <title> 給標籤一個文字一個文字提示 超練街和圖片用的比較多 -->
+        <div title="英雄聯盟">LOL</div> <!-- 鼠標移過去會顯示title裡面的文字 -->
+        <a title="GOOGLE" href="https://www.google.com.tw/">GOOGLE</a>
+
+    <!-- <lang> 給那段文字設置你想要的語言 一般很少用  -->
+        <div lang="en">hello</div>
+        
+</body>
+</html>

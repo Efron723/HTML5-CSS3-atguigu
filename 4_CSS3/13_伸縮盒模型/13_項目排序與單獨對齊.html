@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>13_項目排序與單獨對齊</title>
+    <style>
+        .outer {
+            width: 400px;
+            height: 900px;
+            background-color: #888;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap; 
+            justify-content: flex-start;
+        }
+        .inner {
+            width: 200px;
+            height: 200px;
+            border: 1px solid black;
+            background-color: skyblue;
+            box-sizing: border-box;
+            
+            /* 可以拉伸 可以壓縮 設置基準長度為 0 可以簡寫為 flex: 1; */
+            flex: 1 1 0;  /* 最常用!!! */
+        }
+
+        /* 起始點為0 從小到大 從左到右 */
+        .inner1 {
+            order: -1;
+        }
+        .inner2 {
+            order: 3;
+
+            /* 
+            單獨調整側軸所在位置 
+            總共有三個 
+            flex-start
+            flex-end
+            center
+            */
+            align-self: center;
+        }
+        .inner3 {
+            order: 1;
+            align-self: flex-end;
+        }
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <div class="inner inner1">1</div>
+        <div class="inner inner2">2</div>
+        <div class="inner inner3">3</div>
+    </div>
+</body>
+</html>

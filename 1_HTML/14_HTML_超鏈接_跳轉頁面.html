@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <title>超鏈接_跳轉頁面</title>
+</head>
+<body>
+
+    <!-- 
+         target="_blank"  跳轉頁面 開啟新頁籤
+         target="_self"   跳轉頁面 不開啟新頁籤
+    -->
+
+    <a href="https://www.google.com.tw/" target="_blank">GOOLE</a>
+
+    <a href="https://www.youtube.com/" target="_self">YOUTUBE</a>
+       
+    <!-- 
+        a標籤如果Enter 文字跟文字中間會有空格 (最多空一格)
+        如果不Enter文字跟文字會黏在一起 (僅第一隔空格有效)
+    -->
+
+    <a href="./13_演示base64圖片.html" target="_blank">牙套</a>
+
+    <!-- 超鏈接也可以寫內部網頁 -->
+
+    <a href="./13_演示base64圖片.html">
+        <img width="300" src="./path_test/a/b/4.jpg" alt="牙套">
+    </a>
+    
+    <!-- 
+        a標籤可以包裹圖片或任何東西  他是行內元素
+         但可以包裹塊元素或其他
+         也可以用圖片
+         但不可以包裹自身
+    -->
+</body>
+</html>

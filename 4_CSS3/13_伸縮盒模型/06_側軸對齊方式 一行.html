@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>06_側軸對齊方式 一行</title>
+    <style>
+        .outer {
+            width: 1000px;
+            height: 600px;
+            background-color: #888;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            
+            /* 以下僅限一行的情況 */
+            /* 側軸的對齊方式(一行): 側軸的起始位置對齊 */
+            align-items: flex-start;
+
+            /* 側軸的對齊方式(一行) 側軸的結束位置對齊 */
+            align-items: flex-end;
+
+            /* 側軸的對齊方式(一行): 側軸的中間位置對齊 */
+            align-items: center;
+
+            /* 側軸的對齊方式(一行): 側軸的x英文字的baseline位置對齊 文字大小不同才看的出來 */
+            align-items: baseline;
+
+            /* 側軸的對齊方式(一行): 拉伸到整個父容器(前提: 伸縮項目不能給高度) */
+            align-items: stretch;  /* 他才是默認值 */
+        }
+        .inner {
+            width: 200px;
+            height: 200px;
+            border: 1px solid black;
+            background-color: skyblue;
+            box-sizing: border-box;
+        }
+        .inner2 {
+            height: 300px;
+        }
+        .inner3 {
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <div class="inner inner1">1</div>
+        <div class="inner inner2">2</div>
+        <div class="inner inner3">3</div>
+    </div>
+</body>
+</html>

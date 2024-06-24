@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>02_邊框外輪廓</title>
+    <style>
+        .box1 {
+            width: 400px;
+            height: 400px;
+            padding: 10px;
+            border: 10px solid black;
+            background-color: gray;
+            margin: 0 auto;
+            margin-top: 100px;
+
+            /* 邊框外輪廓 不常用 offset 往外偏移 不佔位 不參與盒子計算大小 */
+
+            outline-width: 20px;
+            outline-color: orange;
+            outline-style: solid; /* none dotted dashed solid double */
+            outline-offset: 40px;
+
+            /* 複合屬性不能把 offset 加進來 必須單獨寫 */
+            outline: 20px orange solid ;
+        }
+    </style>
+</head>
+<body>
+    <div class="box1">你好啊</div>
+</body>
+</html>

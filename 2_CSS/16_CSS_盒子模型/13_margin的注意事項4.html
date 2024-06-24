@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>13_margin的注意事項4</title>
+    <style>
+        div {
+            width: 400px;
+            height: 400px;
+            /* margin-left: auto;
+            margin-right: auto; */
+            margin: 100px auto;
+            background-color: skyblue;
+        }
+        span {
+            background-color: purple;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <!-- margin的值也可以是auto  給一個塊級元素左右margin設置auto可以實現該元素在其父元素內的水平居中 -->
+    <div>你好啊</div>
+    <!-- span 就不行用margin auto -->
+    <span>好好學習</span>
+</body>
+</html>

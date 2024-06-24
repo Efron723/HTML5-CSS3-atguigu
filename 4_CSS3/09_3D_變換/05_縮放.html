@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>05_縮放</title>
+    <style>
+        .outer {
+            width: 200px;
+            height: 200px;
+            border: 2px solid black;
+            margin: 0 auto;
+            margin-top: 100px;
+            transform-style: preserve-3d;
+            perspective: 300px;
+            perspective-origin: 102px 102px;
+        }
+        .inner {
+            width: 200px;
+            height: 200px;
+            background-color: rgba(135, 207, 235, 0.692);
+
+            /* 調整Z軸的縮放相當於調整景深 需調整rotate才看得出變化 */
+            /* 
+            scale 裡面是景深的倍數 
+            perspective: 300px; scaleZ(2) = perspective: 150px; scaleZ(1) 
+            */
+            transform: scaleZ(2) rotateY(45deg);
+            transform: scale3d(1.5,1.5,2) rotateY(45deg); /* 裡面皆是倍數且不能省略要加逗號 */
+        }
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <div class="inner">你好啊</div>
+    </div>
+</body>
+</html>
